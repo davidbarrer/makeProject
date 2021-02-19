@@ -8,5 +8,6 @@ mkdir $raiz
 cd $raiz
 mkdir -p src/java/$out test/java/$out
 cd ..
+echo "tree result"
 tree $raiz
 
