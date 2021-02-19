@@ -1,0 +1,12 @@
+#!/bin/bash
+out="${1//.//}"
+readarray -d / -t strarr <<< "$out"
+n=${#strarr[*]}
+n=$n-1
+raiz="${strarr[n]}"
+mkdir $raiz
+cd $raiz
+mkdir -p src/java/$out test/java/$out
+cd ..
+tree $raiz
+
